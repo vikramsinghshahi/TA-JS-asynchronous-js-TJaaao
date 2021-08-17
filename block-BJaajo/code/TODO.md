@@ -120,11 +120,6 @@ console.log('three');
 8. Write a function named `asyncForEach` that is similar to `forEach`. But `asyncForEach` is asynchronous in nature rather than synchronous.
 
 ```js
-funciton asyncForEach( arr , cb){
-  return cb
-  //
-}
-
 //  Output of the function below should be
 // one
 // three
