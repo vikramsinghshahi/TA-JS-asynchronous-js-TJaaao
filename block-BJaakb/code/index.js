@@ -1,17 +1,17 @@
-let xtr = new XMLHttpRequest();
+function fetch(url) {
+  return new Promise((resolve, reject) => {
+    let xtr = new XMLHttpRequest();
+    xtr.open('GET', url);
 
-xtr.open('GET', url);
+    xtr.onload = function () {
+      resolve(JSON.parse(xtr.response));
+    };
 
-xtr.onload = function () {
-  userData = JSON.parse(xtr.response);
-};
+    xtr.onerror = function () {
+      reject('something went wrong');
+    };
+    xtr.send();
+  });
+}
 
-xtr.onerror = function () {
-  console.error('something went wrong');
-};
-
-xtr.send();
-
-function fetch() {}
-
-fetch(url);
+// fetch(url);
