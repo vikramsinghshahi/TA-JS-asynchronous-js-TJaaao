@@ -46,7 +46,11 @@ function renderNews(news) {
 }
 
 fetch(url)
-  .then((res) => res.json())
+  .then((res) => {
+    // console.log(res);
+    // console.log(res.json());
+    return res.json();
+  })
   .then((news) => {
     console.log(news);
     let allSources = Array.from(
