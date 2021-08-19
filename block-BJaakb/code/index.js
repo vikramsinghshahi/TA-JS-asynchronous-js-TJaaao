@@ -15,3 +15,7 @@ function fetch(url) {
 }
 
 // fetch(url);
+
+let five = new Promise((resolve, reject) => {
+  resolve(5);
+}).then((value) => console.log(value));
